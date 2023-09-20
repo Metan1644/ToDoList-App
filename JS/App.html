@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo Lis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Todo List App</h1>
+  <div id="formContainer">
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <input type="text" id="deadlineInput" placeholder="Enter deadline">
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <br>
+  
+  <div id="filterContainer">
+    <label><input type="checkbox" id="completedFilter" onchange="toggleCompletedVisibility()">Show Completed Tasks</label>
+    <label>Sort by:
+      <select id="sortSelect" onchange="sortTasks()">
+        <option value="name">Name</option>
+        <option value="deadline">Deadline</option>
+      </select>
+    </label>
+  </div>
+  <br>
+  <ul id="taskList"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
